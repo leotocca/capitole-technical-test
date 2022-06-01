@@ -1,13 +1,6 @@
 <template>
-	<div class="bg-black">
-		<HelloWorld msg="Vue 3 + Vite" />
-	</div>
+	<router-view></router-view>
 </template>
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-export default {
-	components: {
-		HelloWorld,
-	},
-};
+export default {};
 </script>
