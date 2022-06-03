@@ -1,5 +1,7 @@
 <template>
-	<div class="w-full flex flex-wrap items-center justify-center">
+	<div
+		class="w-full flex flex-wrap items-center justify-center pt-32 pb-20 bg-navy-100"
+	>
 		<Movie
 			v-for="(movie, index) in movies"
 			:key="`movie-${index}`"

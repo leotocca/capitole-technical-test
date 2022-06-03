@@ -1,5 +1,7 @@
 <template>
-	<div class="w-full h-screen flex flex-col items-center justify-center">
+	<div
+		class="w-full h-screen flex flex-col items-center justify-center pt-32 pb-20 bg-navy-100"
+	>
 		<h1 class="text-4xl font-bold underline text-red-700">
 			Browse movies by category
 		</h1>

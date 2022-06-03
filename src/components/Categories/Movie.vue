@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="w-[320px] h-[400px] relative group mx-5 my-5 cursor-pointer overflow-hidden transition-all duration-300"
+		class="w-[320px] h-[400px] relative group mx-5 my-5 overflow-hidden transition-all duration-300"
 	>
 		<div
 			class="w-full h-full bg-center bg-contain bg-no-repeat"
@@ -9,7 +9,7 @@
 			}"
 		></div>
 		<div
-			class="absolute top-0 left-0 px-10 w-full h-full translate-y-full group-hover:translate-y-0 group-hover:bg-gray-700 group-hover:bg-opacity-70 transition-all duration-300"
+			class="absolute top-0 left-0 px-10 w-full h-full translate-y-full group-hover:translate-y-0 group-hover:bg-blue-900 group-hover:bg-opacity-70 transition-all duration-300"
 		>
 			<div class="w-full h-full relative">
 				<h3
@@ -18,7 +18,7 @@
 					{{ title }}
 				</h3>
 				<button
-					class="absolute inset-x-0 bottom-10 font-bold text-center bg-white px-4 py-2 border border-white text-gray-700 hover:bg-transparent hover:text-white mt-5 transition-all duration-200 rounded-lg"
+					class="absolute inset-x-0 bottom-10 font-bold text-center bg-red-500 px-4 py-2 border-2 border-red-500 text-white hover:bg-opacity-50 hover:text-white mt-5 transition-all duration-200 rounded-lg cursor-pointer"
 				>
 					View More
 				</button>
