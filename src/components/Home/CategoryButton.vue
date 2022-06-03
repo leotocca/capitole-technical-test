@@ -1,6 +1,6 @@
 <template>
 	<button
-		class="inline-flex items-center px-6 py-3 text-sm sm:text-base mr-4 bg-red-500 border border-transparent rounded-md font-bold text-white capitalize tracking-widest hover:bg-red-100 active:bg-red-900 focus:outline-none focus:border-red-900 focus:ring focus:ring-red-300 disabled:opacity-25 transition"
+		class="inline-flex items-center px-6 py-3 text-lg mx-5 mt-5 bg-red-500 rounded-md font-bold border-2 border-red-500 text-white capitalize tracking-widest hover:bg-opacity-70 transition-all duration-300"
 		@click="redirectUser"
 	>
 		{{ category.name }}
