@@ -67,7 +67,7 @@
 						@click="handleAddToCart"
 						class="w-52 font-bold text-center bg-red-500 px-4 py-2 border-2 border-red-500 text-white hover:bg-opacity-50 hover:text-white mt-10 transition-all duration-200 rounded-lg cursor-pointer"
 					>
-						Add to Cart
+						{{ buttonText }}
 					</button>
 				</div>
 			</div>
@@ -81,11 +81,16 @@ export default {
 	data() {
 		return {
 			movie: {},
+			buttonText: "Add to Cart",
 		};
 	},
 	methods: {
 		handleAddToCart() {
 			this.$store.dispatch("commitMovie", this.movie);
+			this.buttonText = "Added to Cart!";
+			setTimeout(() => {
+				this.buttonText = "Add to Cart";
+			}, 1500);
 		},
 	},
 	async mounted() {
