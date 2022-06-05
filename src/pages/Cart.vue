@@ -4,20 +4,14 @@
 	</div>
 </template>
 <script>
-// import Movie from "../components/Categories/Movie.vue";
-// import Vue3Lottie from "vue3-lottie";
-// import SpinnerAnimation from "../components/Lottie/spinner.json";
-
 export default {
-	components: {
-		// Movie,
-		// Vue3Lottie,
-	},
+	components: {},
 	data() {
 		return {};
 	},
-	methods: {},
-	mounted() {},
+	mounted() {
+		console.log({ state: this.$store.state.movies });
+	},
 };
 </script>
 <style scoped></style>

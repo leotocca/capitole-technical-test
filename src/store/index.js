@@ -2,17 +2,17 @@ import Vuex from "vuex";
 
 export default new Vuex.Store({
 	state: {
-		movie: [],
+		movies: [],
 	},
 	mutations: {
-		addMovie(state, payload) {
-			state.movie = [...state.movie, payload];
+		addMovies(state, payload) {
+			state.movies = [...state.movies, payload];
 		},
 	},
 	actions: {
-		commitMovie({ state, commit }, payload) {
-			if (state.movie.findIndex((movie) => movie.id === payload.id) === -1) {
-				commit("addMovie", payload);
+		commitMovies({ state, commit }, payload) {
+			if (state.movies.findIndex((movie) => movie.id === payload.id) === -1) {
+				commit("addMovies", payload);
 			}
 		},
 	},
