@@ -43,23 +43,13 @@
 						<div class="w-full mt-5">
 							<p class="font-bold text-xl">
 								Production companies:
-								<span
-									v-for="(company, index) in movie.production_companies"
-									:key="`company-${index}`"
-									class="font-normal inline-block ml-2"
-									>{{ company.name }}</span
-								>
+								<span class="font-normal">{{ productionsCompanies }}</span>
 							</p>
 						</div>
 						<div class="w-full mt-5">
 							<p class="font-bold text-xl">
 								Production countries:
-								<span
-									v-for="(country, index) in movie.production_countries"
-									:key="`country-${index}`"
-									class="font-normal inline-block ml-2"
-									>{{ country.name }}</span
-								>
+								<span class="font-normal">{{ productionsCountries }}</span>
 							</p>
 						</div>
 					</div>
@@ -91,6 +81,38 @@ export default {
 			setTimeout(() => {
 				this.buttonText = "Add to Cart";
 			}, 1500);
+		},
+	},
+	computed: {
+		productionsCompanies() {
+			if (this.movie.production_companies) {
+				const parsedCompanies = this.movie.production_companies.map(
+					(company, index) => {
+						if (index !== this.movie.production_companies.length - 1) {
+							return `${company.name},`;
+						} else {
+							return company.name;
+						}
+					}
+				);
+
+				return parsedCompanies.join(" ");
+			}
+		},
+		productionsCountries() {
+			if (this.movie.production_countries) {
+				const parsedCompanies = this.movie.production_countries.map(
+					(company, index) => {
+						if (index !== this.movie.production_countries.length - 1) {
+							return `${company.name},`;
+						} else {
+							return company.name;
+						}
+					}
+				);
+
+				return parsedCompanies.join(" ");
+			}
 		},
 	},
 	async mounted() {
