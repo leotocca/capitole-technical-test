@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="container mx-auto flex flex-col items-center justify-center mt-32"
+		class="container mx-auto flex flex-col items-center justify-center mt-20"
 	>
 		<h3 class="text-blue-900 font-bold text-2xl text-center">
 			Top 3 most seen movies of the week:
