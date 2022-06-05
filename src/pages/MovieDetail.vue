@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full pt-32 pb-20 bg-navy-100">
+	<div class="w-full h-full pt-32 pb-20 bg-navy-100">
 		<div class="container mx-auto">
 			<div class="flex w-full">
 				<div class="w-1/2">

@@ -1,16 +1,16 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../pages/Home.vue";
-import About from "../pages/About.vue";
+import Categories from "../pages/Categories.vue";
 import Category from "../pages/Category.vue";
 import MovieDetail from "../pages/MovieDetail.vue";
-import Search from "../pages/Search.vue";
+import SearchResults from "../pages/SearchResults.vue";
 
 const routes = [
 	{ path: "/", component: Home },
-	{ path: "/about", component: About },
+	{ path: "/categories", component: Categories },
 	{ path: "/category/:category", component: Category },
 	{ path: "/movie-detail/:id", component: MovieDetail },
-	{ path: "/search", component: Search },
+	{ path: "/search-results/:searchQuery", component: SearchResults },
 ];
 
 const router = createRouter({
