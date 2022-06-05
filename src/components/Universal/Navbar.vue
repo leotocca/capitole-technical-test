@@ -7,7 +7,14 @@
 				>
 			</div>
 			<div>
-				<router-link class="font-bold text-lg text-blue-900" to="/"
+				<router-link
+					class="font-bold text-lg text-blue-900 border-b-2 border-transparent hover:text-blue-500 hover:border-blue-500 transition-all duration-300 mr-7"
+					to="/"
+					>Search Movies</router-link
+				>
+				<router-link
+					class="font-bold text-lg text-blue-900 border-b-2 border-transparent hover:text-blue-500 hover:border-blue-500 transition-all duration-300"
+					to="/categories"
 					>Browse by category</router-link
 				>
 			</div>
