@@ -1,15 +1,22 @@
 <template>
 	<div
-		class="w-full h-full flex flex-col items-center justify-center pt-32 pb-20 bg-navy-100"
+		class="w-full h-screen flex flex-col items-center justify-center pt-32 pb-20 bg-navy-100"
 	>
-		<search-form />
-		<most-seen-movies-of-the-week />
+		<h1 class="text-4xl font-bold text-blue-900">Browse movies by category</h1>
+
+		<div
+			class="container mx-auto flex justify-center items-center flex-wrap mt-16"
+		>
+			<div v-for="(category, index) in categories" :key="`category-${index}`">
+				<category-button :category="category" />
+			</div>
+		</div>
 	</div>
 </template>
 <script>
 import axios from "axios";
-import mostSeenMoviesOfTheWeek from "../components/Universal/MostSeenMoviesOfTheWeek.vue";
-import SearchForm from "../components/Home/SearchForm.vue";
+
+import CategoryButton from "../components/Categories/CategoryButton.vue";
 
 export default {
 	data() {
@@ -18,8 +25,7 @@ export default {
 		};
 	},
 	components: {
-		mostSeenMoviesOfTheWeek,
-		SearchForm,
+		CategoryButton,
 	},
 	async mounted() {
 		const { data } = await axios.get(
