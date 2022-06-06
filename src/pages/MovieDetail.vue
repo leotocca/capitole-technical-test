@@ -71,7 +71,7 @@ export default {
 	},
 	methods: {
 		handleAddToCart() {
-			this.$store.dispatch("commitMovies", this.movie);
+			this.$store.dispatch("commitMovie", this.movie);
 			this.buttonText = "Added to Cart!";
 			setTimeout(() => {
 				this.buttonText = "Add to Cart";
