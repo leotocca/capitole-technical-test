@@ -2,6 +2,8 @@
 
 This repo is the solution to a technical test. It is a frontend application built with Vuejs + Vite.
 
+*You can see the application running live [here](https://capitole-technical-test.vercel.app/)*
+
 It uses the following libraries:
 
 - [Vite](https://vitejs.dev/)
