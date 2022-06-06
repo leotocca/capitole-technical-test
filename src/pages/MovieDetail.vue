@@ -32,12 +32,7 @@
 						<div class="w-full mt-5">
 							<p class="font-bold text-xl">
 								Genres:
-								<span
-									v-for="(genre, index) in movie.genres"
-									:key="`genre-${index}`"
-									class="font-normal inline-block ml-2"
-									>{{ genre.name }}</span
-								>
+								<span class="font-normal">{{ movieGenres }}</span>
 							</p>
 						</div>
 						<div class="w-full mt-5">
@@ -84,6 +79,19 @@ export default {
 		},
 	},
 	computed: {
+		movieGenres() {
+			if (this.movie.genres) {
+				const parsedCompanies = this.movie.genres.map((genre, index) => {
+					if (index !== this.movie.genres.length - 1) {
+						return `${genre.name},`;
+					} else {
+						return genre.name;
+					}
+				});
+
+				return parsedCompanies.join(" ");
+			}
+		},
 		productionsCompanies() {
 			if (this.movie.production_companies) {
 				const parsedCompanies = this.movie.production_companies.map(
@@ -102,11 +110,11 @@ export default {
 		productionsCountries() {
 			if (this.movie.production_countries) {
 				const parsedCompanies = this.movie.production_countries.map(
-					(company, index) => {
+					(country, index) => {
 						if (index !== this.movie.production_countries.length - 1) {
-							return `${company.name},`;
+							return `${country.name},`;
 						} else {
-							return company.name;
+							return country.name;
 						}
 					}
 				);
