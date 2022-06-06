@@ -36,7 +36,9 @@
 						<div class="w-full mt-5">
 							<p class="font-bold text-xl">
 								Duration:
-								<span class="font-normal text-base">{{ movie.runtime }}</span>
+								<span class="font-normal text-base"
+									>{{ movie.runtime }} mins</span
+								>
 							</p>
 						</div>
 						<div class="w-full mt-5">
