@@ -9,7 +9,7 @@
 						class="mx-auto"
 					/>
 				</div>
-				<div class="w-1/2 mx-5 mt-10 text-blue-900">
+				<div class="w-1/2 mx-5 mt-6 text-blue-900">
 					<h1 class="text-4xl">
 						{{ movie.title }}
 					</h1>
@@ -19,33 +19,41 @@
 							<div class="w-1/2">
 								<p class="font-bold text-xl">
 									Voters opinion:
-									<span class="font-normal">{{ movie.vote_average }}</span>
+									<span class="font-normal text-base">{{
+										movie.vote_average
+									}}</span>
 								</p>
 							</div>
 							<div class="w-1/2">
 								<p class="font-bold text-xl">
 									Release date:
-									<span class="font-normal">{{ movie.release_date }}</span>
+									<span class="font-normal text-base">{{
+										movie.release_date
+									}}</span>
 								</p>
 							</div>
 						</div>
 						<div class="w-full mt-5">
 							<p class="font-bold text-xl">
-								Genres:
-								<span class="font-normal">{{ movieGenres }}</span>
+								Duration:
+								<span class="font-normal text-base">{{ movie.runtime }}</span>
 							</p>
 						</div>
 						<div class="w-full mt-5">
-							<p class="font-bold text-xl">
-								Production companies:
-								<span class="font-normal">{{ productionsCompanies }}</span>
-							</p>
+							<p class="font-bold text-xl">Genres:</p>
+							<p class="mt-3">{{ movieGenres }}</p>
 						</div>
 						<div class="w-full mt-5">
-							<p class="font-bold text-xl">
-								Production countries:
-								<span class="font-normal">{{ productionsCountries }}</span>
-							</p>
+							<p class="font-bold text-xl">Production companies:</p>
+							<p class="mt-3">{{ productionsCompanies }}</p>
+						</div>
+						<div class="w-full mt-5">
+							<p class="font-bold text-xl">Production countries:</p>
+							<p class="mt-3">{{ productionsCountries }}</p>
+						</div>
+						<div class="w-full mt-5">
+							<p class="font-bold text-xl">Overview:</p>
+							<p class="mt-3">{{ movie.overview }}</p>
 						</div>
 					</div>
 					<button

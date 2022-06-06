@@ -2,7 +2,9 @@
 	<div
 		class="w-full flex flex-col item-center justify-center pt-32 pb-20 bg-navy-100"
 	>
-		<h3 class="text-blue-900 text-2xl text-center">Search results:</h3>
+		<h3 class="text-blue-900 text-2xl text-center">
+			Search results for: <span class="font-bold">{{ searchTerm }}</span>
+		</h3>
 		<div
 			v-if="searchResultsMovies.length !== 0"
 			class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center items-center mt-10"
@@ -42,6 +44,11 @@ export default {
 			loading: false,
 			SpinnerAnimation,
 		};
+	},
+	computed: {
+		searchTerm() {
+			return this.$route.params.searchQuery;
+		},
 	},
 	methods: {
 		async makeSearchRequest() {
