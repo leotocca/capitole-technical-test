@@ -2,7 +2,7 @@
 	<div
 		class="container mx-auto flex flex-col items-center justify-center mt-20"
 	>
-		<h3 class="text-blue-900 font-bold text-2xl text-center">
+		<h3 class="text-blue-900 text-2xl lg:text-4xl text-center">
 			Top 3 most seen movies of the week:
 		</h3>
 		<div

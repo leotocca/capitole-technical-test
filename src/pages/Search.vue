@@ -9,7 +9,7 @@
 <script>
 import axios from "axios";
 import mostSeenMoviesOfTheWeek from "../components/Universal/MostSeenMoviesOfTheWeek.vue";
-import SearchForm from "../components/Home/SearchForm.vue";
+import SearchForm from "../components/Search/SearchForm.vue";
 
 export default {
 	data() {

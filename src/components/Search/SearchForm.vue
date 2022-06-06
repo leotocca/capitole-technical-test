@@ -1,6 +1,6 @@
 <template>
 	<div class="container mx-auto flex flex-col justify-center items-center">
-		<h1 class="text-blue-900 text-3xl font-bold">Search Movies</h1>
+		<h1 class="text-blue-900 text-2xl lg:text-4xl">Search Movies</h1>
 		<p>{{ searchInput }}</p>
 		<form
 			v-on:submit="redirectToSearchResultsPage"
